@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES6",
     "lib": ["dom", "dom.iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,10 +14,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "src",
     "downlevelIteration": true,
     "types": ["vite/client"],
-    "typeRoots": ["**/@types", "src/types"]
+    "typeRoots": ["**/@types", "**/types"],
+    "baseUrl": ".",
+    "paths": {
+      "/@/*": ["./src/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
